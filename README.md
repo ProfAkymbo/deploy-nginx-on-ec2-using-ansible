@@ -1,3 +1,5 @@
+# Ansible mini project
+Note that everything here is to be carried out on your control-node/master or wsl terminal
 ## Step 1: Install Ansible on the Control Node (pre-requisite)
 Install Ansible using your operating system's package manager. 
 for wsl/Ubuntu/Debian:
