@@ -16,7 +16,7 @@ then copy and paste keypair, save and exit
 
 ## step 3: create inventory file to store host IPs
 nano inventory
-
+```
 [webservers]
 3.50.120.4  #put your host IPs
 10.0.1.15
@@ -24,7 +24,7 @@ nano inventory
 [webservers:vars]
 ansible_user=ec2-user
 ansible_ssh_private_key_file=demoKey.pem
-
+```
 save and exit
 
 run the ansible adhoc command below
@@ -41,7 +41,7 @@ to do this create playbook with,
 
 ## step 6: nano playbook.yaml or nano main.yml
 copy and paste
-
+```
 ---
 - name: Configure Web Servers
   hosts: webservers
@@ -65,7 +65,7 @@ copy and paste
         content: |
             <h1>Hello from {{ inventory_hostname }}</h1>
             <p>Server configured by Ansible</p>
-
+```
 ## Step 7: run the command
 ansible-playbook -i inventory playbook.yml
 
